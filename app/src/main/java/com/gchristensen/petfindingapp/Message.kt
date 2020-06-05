@@ -5,10 +5,25 @@ package com.gchristensen.petfindingapp
  * */
 class Message {
     /**
+     * Checks if message is in range to location.
+     * */
+    fun inRange(location: Location): Boolean {
+        TODO()
+    }
+
+    /**
      * Checks if the pet is relevant to the message. For example would search the message content
      * for the pet's breed.
      * */
     fun isRelevantTo(pet: Pet): Boolean {
+        TODO()
+    }
+
+    /**
+     * Checks if the pet is highly relevant to the message. Things like owner name or address are
+     * considered here.
+     * */
+    fun isHighlyRelevantTo(pet: Pet): Boolean {
         TODO()
     }
 }
