@@ -10,7 +10,7 @@ class Message {
      * Checks if message is in range to location.
      * */
     fun inRange(otherLocation: Location, radius: Int): Boolean {
-        return location.distanceFrom(otherLocation) < radius
+        return location.distanceTo(otherLocation) < radius
     }
 
     /**

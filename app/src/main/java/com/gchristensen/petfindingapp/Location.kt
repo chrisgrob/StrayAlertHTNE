@@ -9,7 +9,7 @@ class Location(private val androidLocation: AndroidLocation) {
     /**
      * Gives the distance from another location.
      * */
-    fun distanceFrom(other: Location): Int {
+    fun distanceTo(other: Location): Int {
         return androidLocation.distanceTo(other.androidLocation).toInt()
     }
 }
