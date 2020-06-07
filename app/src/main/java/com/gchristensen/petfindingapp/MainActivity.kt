@@ -17,38 +17,11 @@ class MainActivity : AppCompatActivity() /*, OnMapReadyCallback*/ {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_maps)
-
-        val api = GoogleApiAvailability.getInstance()
-
-        val status = api.isGooglePlayServicesAvailable(this)
-
-        if (status != ConnectionResult.SUCCESS) {
-            throw Exception()
-        }
+        setContentView(R.layout.map_view_fragment)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 //        val mapFragment = supportFragmentManager
 //                .findFragmentById(R.id.map) as SupportMapFragment
 //        mapFragment.getMapAsync(this)
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        FirebaseInstanceId.getInstance().instanceId
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    Log.w(TOKEN_TAG, "getInstanceId failed", task.exception)
-                    return@OnCompleteListener
-                }
-
-                // Get new Instance ID token
-                val token = task.result?.token ?: ""
-
-                // Log and toast
-                Log.d(TOKEN_TAG, token)
-                Toast.makeText(baseContext, token, Toast.LENGTH_LONG).show()
-            })
     }
 
 //    /**
