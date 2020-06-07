@@ -2,12 +2,12 @@ package com.gchristensen.petfindingapp
 
 /**
  * A Profile Class containing user's location, pets, and radius preference.
- *
+ * it needs to output a notification level of 1 if the message is in range, and 0 if not.
  * */
 class Profile {
     val pets: ArrayList<Pet> = TODO()
     var radius: Int = TODO()
-    var location: Location = TODO()
+    var location: Location = TODO() // Need to attach to Gage's Location class
 
     /**
      * Returns the notification level and notification that the user should get for this message.
@@ -15,14 +15,17 @@ class Profile {
      * */
     data class Notification(val level: Int, val content: String)
     fun notificationLevel(message: Message): Notification {
-        TODO()
-        // Example for loop
-//        for (pet in pets) {
-//            // do stuff
-//        }
-
-//        This is how you return a data class
-//        return Notifcation(0, "hi my name is bob")
+        if (messageInRange(message)) { // if the message is in range
+            if (messageHighlyRelevant(message)) {
+                return Notification(3, "A dog has gone missing close to your location!") // High relevance
+            } else if (messageRelevant(message)) {
+                return Notification(2, "A dog has gone missing in your area") // Medium relevance
+            } else {
+                return Notification(1, "A dog is missing in your area") // Low relevance
+            }
+        } else {
+            return Notification(0, "") // No notification if not in range
+        }
     }
 
     /**
