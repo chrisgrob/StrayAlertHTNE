@@ -5,57 +5,36 @@ package com.gchristensen.petfindingapp
  * */
 class Pet {
     /*
-     *  Attributes
+     *  Attributes, Accessors, Mutators
     */
     private var petName: String = TODO()
+        get() = petName
+        set(newName) {
+            petName = newName
+        }
+
     private var petBreed: String = TODO()
+        get() = petBreed
+        set(newBreed) {
+            petBreed = newBreed
+        }
+
     private var petColor: String = TODO()
+        get() = petColor
+        set(newColor) {
+            petColor = newColor
+        }
+
     private var collarColor: String = TODO()
+        get() = collarColor
+        set(newCollarColor) {
+            collarColor = newCollarColor
+        }
+
     private var ownerName: String = TODO()
+        get() = ownerName
+        set(newOwnerName) {
+            ownerName = newOwnerName
+        }
 
-    /*
-     *  Mutators
-    */
-    fun setPetName(newName: String) {
-        petName = newName
-    }
-
-    fun setPetBreed(newBreed: String) {
-        petBreed = newBreed
-    }
-
-    fun setPetColor(newColor: String) {
-        petBreed = newColor
-    }
-
-    fun setCollarColor(newCollarColor: String) {
-        petBreed = newCollarColor
-    }
-
-    fun setOwnerName(newOwnerName: String) {
-        petBreed = newOwnerName
-    }
-
-    /*
-     *  Accessors
-    */
-    fun getPetName(pet: Pet): String {
-        return petName
-    }
-
-    fun getPetBreed(pet: Pet): String {
-        return petBreed
-    }
-
-    fun getPetColor(pet: Pet): String {
-        return petColor
-    }
-
-    fun getCollarColor(pet: Pet): String {
-        return collarColor
-    }
-
-    fun getOwnerName(pet: Pet): String {
-        return ownerName
-    }
 }
