@@ -28,3 +28,16 @@ is more relevant to them. In addition, if the alert contained info such as phone
 addresses from the collar, a high level notification that confirms that the owner's pet is found
 would be sent. This increases the likelihood that a finder will be able to get in contact with the
 owner.
+
+## Our Progress
+
+We all came into this project with little Kotlin/Android experience. As such, we were not able to
+produce a result due to various road blocks. However, we still think that this project is viable and
+will continue working on it after the hackathon. The main functionality would be having a server 
+find the users relevant to an alert and then send the alert, and this will not be complicated to 
+implement. Funding could be acquired through a lightweight ad model that advertises pet products,
+and any generated revenue could be donated to animal welfare causes. Currently, we have the 
+following:
+
+* UI prototypes.
+* Basic client-side functionality to determine whether an alert is relevant to the app owner.
